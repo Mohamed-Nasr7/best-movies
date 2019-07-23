@@ -1,0 +1,77 @@
+nz-layout{
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+.logo {
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 24px;
+    float: left;
+    line-height: 32px
+}
+
+.logo h2{
+    color: green
+}
+
+[nz-menu] {
+    line-height: 64px;
+    float: right;
+    margin-right: 2%
+}
+
+nz-header:after{
+    content: '';
+    display: block;
+    clear: both
+}
+
+
+
+
+
+
+
+
+/* Body */
+
+nz-content {
+    padding: 50px 50px 0;
+}
+
+.inner-content {
+    background: #fff;
+    padding: 24px;
+    height: inherit;
+}
+
+
+div.row1{
+    margin-top: 15px
+}
+
+img{
+    height: 80%;
+    width: 80%;
+}
+
+
+div.row2{
+    margin-top: 35px
+}
+
+p{
+    font-size: 1.1em;
+    color: #000
+}
+
+
+
+
+nz-footer {
+    text-align: center;
+}
+

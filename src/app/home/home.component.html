@@ -1,0 +1,49 @@
+<nz-layout>
+
+  <nz-header>
+    
+    <div class="logo"> <a routerLink="/home"><h2>FavMovie</h2></a></div>
+    
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <nz-input-group [nzSuffix]="suffixIconSearch">
+        <input type="text" nz-input placeholder="Search for Movie" [(ngModel)]="name"/>
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+      </ng-template>
+    </ul>
+
+  </nz-header>
+
+
+  <nz-content>
+    <div class="inner-content" nz-row>
+      
+      <div class="card" nz-col nzSm="24" nzLg="12" nzXl="8" *ngFor="let movie of movies.Search | filter:name" >
+        
+        <nz-card nzHoverable [nzCover]="coverTemplate" (click)="showModal(movie.imdbID)">
+          <nz-card-meta [nzTitle]="movie.Title" [nzDescription]="movie.Year"></nz-card-meta>
+          <button [routerLink]="['/details',movie.imdbID]" nz-button nzType="default">More info</button>
+        </nz-card>
+        <ng-template #coverTemplate>
+          <img alt="example" [src]="movie.Poster" />
+        </ng-template>
+        
+      </div>
+      
+    </div>
+
+    <nz-modal [(nzVisible)]="isVisible" [nzTitle]="details.Title" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+        <p><b>Actors: </b> {{details.Actors}}</p>
+        <p><b>Released: </b> {{details.Released}}</p>
+        <p><b>Rate: </b> {{details.imdbRating}}</p>
+        <p><b>Director: </b> {{details.Director}}</p>
+      </nz-modal>
+
+  </nz-content>
+
+  
+
+  <nz-footer>FavMovie ©2019 All Right Reserved</nz-footer>
+
+</nz-layout>

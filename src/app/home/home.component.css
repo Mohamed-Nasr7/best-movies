@@ -1,0 +1,97 @@
+nz-layout{
+    min-height: 100vh;
+}
+
+
+.logo {
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 24px;
+    float: left;
+    line-height: 32px
+}
+
+.logo h2{
+    color: green
+}
+
+[nz-menu] {
+    line-height: 64px;
+    float: right;
+    margin-right: 2%
+}
+
+nz-header:after{
+    content: '';
+    display: block;
+    clear: both
+}
+
+input{
+    width: 20rem;
+    height: 2.5rem;
+}
+
+
+@media(max-width: 760px){
+    input{
+        width: 200px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 500px){
+    input{
+        width: 100px;
+        height: 40px;
+    }
+}
+
+
+
+
+
+
+
+nz-content {
+    padding: 50px 50px 0;
+}
+
+.inner-content {
+    background: #fff;
+    padding: 24px;
+    height: inherit;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0
+}
+
+nz-card{
+    width:340px
+}
+
+img{
+    height: 500px;
+}
+
+button.ant-btn.ant-btn-default{
+    margin: 20px auto 0
+}
+
+p{
+    color:#000
+}
+
+
+
+
+
+
+
+nz-footer {
+    text-align: center;
+}
+
